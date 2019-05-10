@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
+    <i class="icon-menu burger-button" id="burger-menu"></i>
     <header class="header">
       <div class="container">
         <figure class="logo">
@@ -20,7 +21,7 @@
               <a class="link" href="#portafolio">Portafolio</a>
             </li>
             <li>
-              <a class="link" href="#eventos">Experiencia</a>
+              <a class="link" href="#exp">Experiencia</a>
             </li>
             <li>
               <a class="link" href="#contacto">Trabajemos Juntos</a>
@@ -66,13 +67,17 @@
         </article>
       </div>
     </section>
-    <div class="container">
+    <div id="exp" class="container">
       <h2 class="event-list-title">Mas sobre mi experiencia</h2>
     </div>
     <section id="eventos" class="event-list">
       <div class="container">
         <article class="event">
           <figure class="event-imageContainer">
+            <!-- <div class="flexible-video">
+              <iframe class="youtube" width="560" height="315" src="https://www.youtube.com/embed/13YJiGnL-ao" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div> -->
+            <!-- <video class="html-video" src="video/f8.mp4" controls></video> -->
             <img class="event-image" src="images/evento1.png" width="500" alt="eventos">
           </figure>
           <div class="event-detail">
@@ -92,7 +97,7 @@
           </div>
         </article>
       </div>
-    </section> -->
+    </section>
     <section id="contacto" class="contact">
       <div class="container">
         <form action="index.html" class="form-email">
@@ -117,5 +122,20 @@
         </div>
       </div>
     </footer>
+    <script>
+      const menu = document.querySelector('.menu');
+      const burgerButton = document.querySelector('#burger-menu');
+
+      burgerButton.addEventListener('click', hideShow);
+
+      function hideShow(){
+        if(menu.classList.contains('is-active')){
+          menu.classList.remove('is-active');
+        }else{
+          menu.classList.add('is-active');
+        }
+      }
+
+    </script>
   </body>
 </html>
